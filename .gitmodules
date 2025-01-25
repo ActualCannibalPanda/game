@@ -1,3 +1,6 @@
 [submodule "external/SDL"]
 	path = external/SDL
 	url = https://github.com/libsdl-org/SDL.git
+[submodule "external/BigC"]
+	path = external/BigC
+	url = https://github.com/ActualCannibalPanda/BigC.git

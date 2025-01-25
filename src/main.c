@@ -1,6 +1,8 @@
 #include "game/context.h"
 #include "game/vulkan.h"
 
+#include <bigc/string.h>
+
 static int WindowWidth = 800;
 static int WindowHeight = 600;
 

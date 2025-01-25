@@ -8,9 +8,6 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # Project Variables
 set(EXE_NAME sdl3game)
 
-# SDL Variables
-set(SDL_TEST_LIBRARY OFF)
-
 project(sdlgame C)
 
 set(GAME_SOURCE_FILES
@@ -23,7 +20,7 @@ find_package(Vulkan REQUIRED)
 
 # subdirs
 add_subdirectory(subprojects/)
-add_subdirectory(external/SDL EXCLUDE_FROM_ALL)
+add_subdirectory(external/)
 
 add_executable(${EXE_NAME})
 target_sources(${EXE_NAME}
@@ -37,6 +34,7 @@ PRIVATE
 )
 target_link_libraries(${EXE_NAME}
 PRIVATE
+	BigC
 	SDL3::SDL3
 	Vulkan::Vulkan
 )
